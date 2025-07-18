@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+:root{
+    --primary-color: #a9927d;
+  --secondary-color: #5e503f;
+}
+
+*{
+    box-sizing: border-box;
+    box-shadow: #141212;
+}
+p,b,center{
+    color: #141212;
+}
+
+body{
+    background-color: var(--primary-color);
+    font-family: Saira;
+    margin: 0;
+}
+
+header{
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--secondary-color);
+}
+
+
+.search{
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    border-radius: 50px;
+    font-family: Saira;
+    font-size: 1.3rem;
+    padding: 0.5rem 1rem;
+    color: #fff;
+}
+
+.search::placeholder{
+    color: #ffffff;
+}
+
+.search:focus{
+    outline: none;
+    background-color: var(--primary-color);
+}
+
+main{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie{
+    width: 300px;
+    margin: 1rem;
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 5px rgb(66, 53, 53);
+    position: relative;
+    overflow: hidden;
+    border-radius: 50px;
+}
+
+.movie img{
+    width: 100%;
+    border-radius: 50px;
+    opacity: 0.7;
+}
+
+.movie-info{
+    color: #cecaca;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.2rem;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+.movie-info h3{
+    margin-top: 8;
+}
+
+.movie-info span{
+    background-color: var(--primary-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.movie-info span.blue{
+    color: rgb(25, 90, 212);
+}
+
+.movie-info span.green{
+    color: rgb(15, 55, 17);
+}
+
+.movie-info span.red{
+    color: rgb(255, 3, 3);
+}
+
+.overview{
+    background-color: #000000;
+    color: #ffffff;
+    padding: 2rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-height: 100%;
+    transform: translateY(100%);
+    overflow-y: auto;
+    transition: transform 0.3s ease-in;
+}
+
+.movie:hover .overview{
+    transform: translateY(0);
+    transition: all 1s ease;
+}
