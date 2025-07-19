@@ -36,7 +36,7 @@ function showMovies(movies){
     })
 }
 function getClassByRate(vote){
-    if (vote >=8){
+    if (vote >=8.5){
         return 'blue'
     }if(vote >=6.5){
         return 'green'
